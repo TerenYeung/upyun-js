@@ -99,11 +99,6 @@ class Upyun {
     }
   }
 
-  /**
-   * 
-   * @param {*} remotePath 
-   * @param {*} localPath 
-   */
   async downloadFile(remotePath, localPath) {
     const data = await this.client.getFile(remotePath);
 
@@ -116,11 +111,11 @@ class Upyun {
     return fs.promises
       .writeFile(pathname, data)
       .then(() => {
-        console.log(`🎉 ${chalk.cyan(`Download file succeed: ${pathname}`)}`);
+        console.log(`🎉  ${chalk.cyan(`Download file succeed: ${pathname}`)}`);
         return Promise.resolve(true);
       })
       .catch(() => {
-        console.log(`🤣${chalk.red(`Download file fails: ${pathname}`)}`);
+        console.log(`🤣  ${chalk.red(`Download file fails: ${pathname}`)}`);
         return Promise.resolve(false);
       });;
   }
@@ -159,8 +154,11 @@ class Upyun {
 
   async rmfile(remoteFile) {
     const ret = this.client.deleteFile(remoteFile);
+
     if (ret) {
-      console.log(`🎉  Remove file succeed ${remoteFile}`)
+      console.log(`🎉  ${chalk.cyan(`Remove file succeed: ${remoteFile}`)}`);
+    } else {
+      console.log(`🤣  ${chalk.red(`Remove file fails: ${remoteFile}`)}`);
     }
     return ret;
   }
@@ -180,7 +178,9 @@ class Upyun {
 
     const ret = (await Promise.all(promises)).every(item => item === true);
     if (ret) {
-      console.log(`🎉  Remove directory succeed ${dirname}`)
+      console.log(`🎉  ${chalk.cyan(`Remove directory succeed: ${dirname}`)}`);
+    } else {
+      console.log(`🤣  ${chalk.red(`Remove directory fails: ${dirname}`)}`);
     }
     return ret;
   }

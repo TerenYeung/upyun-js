@@ -8,6 +8,7 @@
 
 <div align="center">
 upyun-js 是对 <a href='https://github.com/upyun/node-sdk'>又拍云 js sdk </a>的二次封装。
+<br>
 
  ![languuage](https://img.shields.io/badge/language-node-gcf.svg) [![npm package](https://img.shields.io/npm/v/upyun-js.svg?style=flat-square)](https://www.npmjs.com/package/dubo-cli) [![NPM downloads](http://img.shields.io/npm/dm/upyun-js.svg?style=flat-square)](https://www.npmjs.com/package/upyun-js) ![license](https://img.shields.io/badge/license-Anti%20996-99ccff.svg)
 </div>
