@@ -1,6 +1,6 @@
 {
   "name": "upyun-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A pretty encapsulation of upyun js sdk",
   "main": "index.js",
   "scripts": {
