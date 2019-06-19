@@ -6,6 +6,8 @@
 
 - 🐞 Fixed up bug that error localFile of uploadFile
 
+- 🐞 Fixed up bug that it cannot uploadDir recursively
+
 ## 1.0.0
 
 `2019-06-18`

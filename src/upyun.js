@@ -64,10 +64,15 @@ class Upyun {
         .map(item => `${localPath}/${item}`);
 
       const promises = fileList.map(async (pathname) => {
-        return this.uploadFile(
-          `${remotePath}/${path.parse(localPath).base}`,
-          pathname
-        );
+
+        if (utils.isDirectory(pathname)) {
+          return this.uploadDir(remotePath, pathname, opts);
+        } else {
+          return this.uploadFile(
+            `${remotePath}/${path.parse(localPath).base}`,
+            pathname
+          );
+        }
       });
 
       return (await Promise.all(promises)).every(item => item === true);
