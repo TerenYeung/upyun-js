@@ -7,11 +7,9 @@
 <!-- <h1 align="center">Dubo CLI</h1> -->
 
 <div align="center">
-
 upyun-js 是对[又拍云 js sdk](https://github.com/upyun/node-sdk) 的二次封装。
 
  ![languuage](https://img.shields.io/badge/language-node-gcf.svg) [![npm package](https://img.shields.io/npm/v/upyun-js.svg?style=flat-square)](https://www.npmjs.com/package/dubo-cli) [![NPM downloads](http://img.shields.io/npm/dm/upyun-js.svg?style=flat-square)](https://www.npmjs.com/package/upyun-js) ![license](https://img.shields.io/badge/license-Anti%20996-99ccff.svg)
-
 </div>
 
 简体中文 | [English](./README-en.md)
