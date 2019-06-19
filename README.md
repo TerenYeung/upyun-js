@@ -139,6 +139,7 @@ upyun.getFileMeta(remotePath);
 ```js
 /**
  * @param {String} remotePath: 远程目录
+ * @return {Promise}
 */
 upyun.usage(remotePath);
 ```
@@ -149,6 +150,7 @@ upyun.usage(remotePath);
 /**
  * @param {String} remotePath: 远程目录
  * @param {Object} opts: 获取列表数据可选的 limit、order 或 iter 值
+ * @return {Promise}
 */
 upyun.listDir(remotePath, opts);
 ```

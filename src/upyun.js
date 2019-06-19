@@ -40,16 +40,16 @@ class Upyun {
   }
 
   async uploadFile(remotePath, localFile, opts = {}) {
-    const remoteFile = `${remotePath}/${path.parse(localPath).base}`;
+    const remoteFile = `${remotePath}/${path.parse(localFile).base}`;
 
     return this.client
-      .putFile(remoteFile, utils.readFile(localPath), opts)
+      .putFile(remoteFile, utils.readFile(localFile), opts)
       .then(() => {
-        console.log(`🎉 ${chalk.cyan(`Upload file succeed: ${localPath}`)}`);
+        console.log(`🎉  ${chalk.cyan(`Upload file succeed: ${localFile}`)}`);
         return Promise.resolve(true);
       })
       .catch(() => {
-        console.log(`🤣${chalk.red(`Upload file fails: ${localPath}`)}`);
+        console.log(`🤣  ${chalk.red(`Upload file fails: ${localFile}`)}`);
         return Promise.resolve(false);
       });
   }
@@ -158,7 +158,11 @@ class Upyun {
   }
 
   async rmfile(remoteFile) {
-    return this.client.deleteFile(remoteFile);
+    const ret = this.client.deleteFile(remoteFile);
+    if (ret) {
+      console.log(`🎉  Remove file succeed ${remoteFile}`)
+    }
+    return ret;
   }
 
   async rmdir(dirname) {
@@ -174,8 +178,11 @@ class Upyun {
       return this.rmfile(path);
     });
 
-    const data = await Promise.all(promises);
-    return data.every(item => item === true);
+    const ret = (await Promise.all(promises)).every(item => item === true);
+    if (ret) {
+      console.log(`🎉  Remove directory succeed ${dirname}`)
+    }
+    return ret;
   }
 
   async mkdir(remotePath) {
