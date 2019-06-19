@@ -8,31 +8,31 @@
 
 <div align="center">
 
-upyun-js 是对[又拍云 js sdk](https://github.com/upyun/node-sdk) 的二次封装。
+upyun-js is secondary encapsulation for [upyun js sdk](https://github.com/upyun/node-sdk).
 
  ![languuage](https://img.shields.io/badge/language-node-gcf.svg) [![npm package](https://img.shields.io/npm/v/upyun-js.svg?style=flat-square)](https://www.npmjs.com/package/dubo-cli) [![NPM downloads](http://img.shields.io/npm/dm/upyun-js.svg?style=flat-square)](https://www.npmjs.com/package/upyun-js) ![license](https://img.shields.io/badge/license-Anti%20996-99ccff.svg)
 
 </div>
 
-简体中文 | [English](./README-en.md)
+[简体中文](./README.md) | English
 
-## ✨ 特性
+## ✨ Features
 
-- 提供更为友好的接口
-- 新增对目录的 CRUD 操作
+- Support more friendly interface
+- addition to CRUD for directory
 
-## 📦 安装
+## 📦 Install
 
 ```bash
 npm install upyun-js
 ```
 
-## 🔨 接口
+## 🔨 Interfaces
 
-### 初始化
+### Initialization
 
 ```js
-const Upyun = require('upyun-js');
+const Upyun = Iequire('upyun-js');
 const config = {
   serviceName: 'upyun service',
   operatorName: 'upyun operator',
@@ -42,7 +42,7 @@ const config = {
 const upyun = new Upyun(config);
 ```
 
-### 下载文件 upyun.downloadFile
+### Download file: upyun.downloadFile
 
 ```js
 /**
@@ -53,7 +53,7 @@ const upyun = new Upyun(config);
 upyun.downloadFile(remotePath, localPath);
 ```
 
-### 下载文件夹 upyun.downloadDir
+### Download directory: upyun.downloadDir
 
 ```js
 /**
@@ -64,7 +64,7 @@ upyun.downloadFile(remotePath, localPath);
 upyun.downloadDir(remotePath, localPath);
 ```
 
-### 上传文件 upyun.uploadFile
+### Upload file: upyun.uploadFile
 
 ```js
 /**
@@ -75,7 +75,7 @@ upyun.downloadDir(remotePath, localPath);
 upyun.uploadFile(remotePath, localFile, opts);
 ```
 
-### 上传文件夹 upyun.uploadDir
+### Upload direactory: upyun.uploadDir
 
 ```js
 /**
@@ -86,7 +86,7 @@ upyun.uploadFile(remotePath, localFile, opts);
 upyun.uploadDir(remotePath, localPath);
 ```
 
-### 删除文件 upyun.rmfile
+### Remove file: upyun.rmfile
 
 ```js
 /**
@@ -96,7 +96,7 @@ upyun.uploadDir(remotePath, localPath);
 upyun.rmfile(remoteFile);
 ```
 
-### 删除文件夹 upyun.rmdir
+### Remove directory: upyun.rmdir
 
 ```js
 /**
@@ -106,7 +106,7 @@ upyun.rmfile(remoteFile);
 upyun.rmdir(dirname);
 ```
 
-### 创建文件夹 upyun.mkdir
+### Create directory: upyun.mkdir
 
 ```js
 /**
@@ -116,7 +116,7 @@ upyun.rmdir(dirname);
 upyun.mkdir(remotePath);
 ```
 
-### 缓存刷新 upyun.refresh
+### Refresh cache: upyun.refresh
 
 ```js
 /**
@@ -126,7 +126,7 @@ upyun.mkdir(remotePath);
 upyun.refresh(urls);
 ```
 
-### 获取文件基本信息 upyun.getFileMeta
+### Get file's meta: upyun.getFileMeta
 
 ```js
 /**
@@ -136,7 +136,7 @@ upyun.refresh(urls);
 upyun.getFileMeta(remotePath);
 ```
 
-### 查看目录大小 upyun.usage
+### View usage of directory: upyun.usage
 
 ```js
 /**
@@ -145,7 +145,7 @@ upyun.getFileMeta(remotePath);
 upyun.usage(remotePath);
 ```
 
-### 获取目录下的文件列表 upyun.listDir
+### Get file list of the directory: upyun.listDir
 
 ```js
 /**

@@ -1,0 +1,35 @@
+{
+  "name": "upyun-js",
+  "version": "1.0.0",
+  "description": "A pretty encapsulation of upyun js sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TerenYeung/upyun-js.git"
+  },
+  "keywords": [
+    "upyun",
+    "js",
+    "sdk",
+    "node"
+  ],
+  "author": "terenyeung@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TerenYeung/upyun-js/issues"
+  },
+  "homepage": "https://github.com/TerenYeung/upyun-js#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "progress": "^2.0.3",
+    "then-fs": "^2.0.0",
+    "upyun": "^3.3.9"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "engines" : { "node" : ">=10.8.0" }
+}

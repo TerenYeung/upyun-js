@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+node_js:
+  - "10"
+script:
+  - "npm run test"
+cache: npm
+install:
+  - "npm i"
+notifications:
+  slack:
+    on_failure: always
+    on_success: change
+    rooms:
+      - "coconut-studio:tOHz6puaNchKj1LiSDPWxs6Y#upyun-js"
