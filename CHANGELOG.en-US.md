@@ -2,6 +2,8 @@
 
 `2019-06-19`
 
+- 🐞 Fixed up bug that uploadFolder will fallten files
+
 - ⚡️ Update cache after uploadFile
 
 - 🐞 Fixed up bug that it cannot uploadDir recursively
