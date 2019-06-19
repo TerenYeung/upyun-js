@@ -154,3 +154,9 @@ upyun.usage(remotePath);
 */
 upyun.listDir(remotePath, opts);
 ```
+
+## 🐤 Related
+
+[upyun js sdk](https://github.com/upyun/node-sdk)
+
+[upyun-webpack-plugin](https://github.com/TerenYeung/upyun-webpack-plugin)
