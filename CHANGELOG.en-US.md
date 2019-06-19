@@ -2,11 +2,13 @@
 
 `2019-06-19`
 
-- ⚡️ Update README.md
+- ⚡️ Update cache after uploadFile
+
+- 🐞 Fixed up bug that it cannot uploadDir recursively
 
 - 🐞 Fixed up bug that error localFile of uploadFile
 
-- 🐞 Fixed up bug that it cannot uploadDir recursively
+- ⚡️ Update README.md
 
 ## 1.0.0
 

@@ -46,6 +46,9 @@ class Upyun {
       .putFile(remoteFile, utils.readFile(localFile), opts)
       .then(() => {
         console.log(`🎉  ${chalk.cyan(`Upload file succeed: ${localFile}`)}`);
+
+        this.refresh(remoteFile);
+
         return Promise.resolve(true);
       })
       .catch(() => {
